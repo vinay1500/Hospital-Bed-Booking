@@ -9,7 +9,7 @@ app.secret_key = "vinaygautam"
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://username:password@localhost/databasename'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@127.0.0.1/covid'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@127.0.0.1/covid'
 db = SQLAlchemy(app)
 
 
@@ -26,7 +26,6 @@ def home():
 @app.route("/test")
 def test():
     try:
-        #print(f"SQLAlchemy Engine Dialect: {db.get_engine().dialect.name}") # Add this line
         a = Test.query.all()
         print(a)
         return 'MY DATABASE IS CONNECTED'
