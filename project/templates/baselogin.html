@@ -48,26 +48,26 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="/" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#departments">Departments</a></li>
             <li><a href="#doctors">Hospitals</a></li>
             <li class="dropdown"><a href="#"><span>SIGN IN</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="userlogin">User Login</a></li>
-                <li class="dropdown"><a href="#"><span>Hospital Staff Login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="hospitaladminlogin">Hospital Administrator Log In</a></li>
-                    <li><a href="doctorlogin">Doctor Log In</a></li>
-                    <li><a href="nursingstaff">Nursing Staff Log In</a></li>
-                    <li><a href="labstafflogin">Lab Staff Log In</a></li>
-                    <li><a href="cleaningstafflogin">Cleaning Staff Log In</a></li>
-                  </ul>
-                </li>
-                <li><a href="hospitallogin">Hospital Login</a></li>
-                <li><a href="/adminlogin">Admin Login</a></li>
-                <li><a href="/usersignup">Signup</a></li>
+                <ul>
+                  <li><a href="userlogin">User Login</a></li>
+                  <li class="dropdown"><a href="#"><span>Hospital Staff Login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="hospitaladminlogin">Hospital Administrator Log In</a></li>
+                      <li><a href="doctorlogin">Doctor Log In</a></li>
+                      <li><a href="nursingstaff">Nursing Staff Log In</a></li>
+                      <li><a href="labstafflogin">Lab Staff Log In</a></li>
+                      <li><a href="cleaningstafflogin">Cleaning Staff Log In</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="hospitallogin">Hospital Login</a></li>
+                  <li><a href="/adminlogin">Admin Login</a></li>
+                  <li><a href="/usersignup">Signup</a></li>
               </ul>
             </li>
             <li><a href="#contact">Contact</a></li>
@@ -92,31 +92,9 @@
         <div class="carousel-item active">
           <img src="static/assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
           <div class="container">
-            <h2>Find the Right Bed, Right Here in Rajasthan!</h2>
-            <p>Struggling to find a hospital bed in Rajasthan? We simplify your search. Discover real-time availability of ICU, Non-ICU, and Specialty beds across various hospitals in your city.</p>
-            <a href="#about" class="btn-get-started">Learn More</a>
+           {% block form %}{% endblock form %}
           </div>
-        </div><div class="carousel-item">
-          <img src="static/assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
-          <div class="container">
-            <h2>Your Health, Our Priority: Bed Booking Made Easy</h2>
-            <p>From Bariatric to Standard beds, find the specific medical bed you need. We provide comprehensive hospital listings with bed availability, ensuring you get the care you deserve, promptly.</p>
-            <a href="#services" class="btn-get-started">Our Services</a>
-          </div>
-        </div><div class="carousel-item">
-          <img src="static/assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
-          <div class="container">
-            <h2>Connecting You to Hospitals Across Rajasthan</h2>
-            <p>Explore a wide network of hospitals in Rajasthan offering various bed types including Specialty and Standard Hospital Beds. Make informed decisions for your healthcare needs with up-to-date information.</p>
-            <a href="#departments" class="btn-get-started">Explore Departments</a>
-          </div>
-        </div><div class="carousel-item">
-          <img src="static/assets/img/hero-carousel/hero-carousel-4.jpg" alt="">
-          <div class="container">
-            <h2>ICU, Non-ICU, Specialty Beds - All in One Place</h2>
-            <p>No more endless calls. Find and book ICU, Non-ICU, Bariatric, and other specialty beds in Rajasthan hospitals through our platform. Get immediate access to critical bed availability information.</p>
-            <a href="#appointment" class="btn-get-started">Book Now</a>
-          </div>
+        </div>
         </div><a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
         </a>

@@ -1,5 +1,6 @@
 from flask import Flask,redirect,render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin,login_required,logout_user,login_user,login_manager,LoginManager,current_user
 
 # database connection
 
@@ -17,9 +18,31 @@ class Test(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(50))
 
+
+
+class User(db.Model):
+    uid=db.Column(db.Integer,primary_key=True)
+    srfid=db.Column(db.String,unique=True)
+    email=db.Column(db.String(20))
+    dob=db.Column(db.String(20))
+
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
+
+@app.route("/usersignup")
+def signup():
+    return render_template("usersignup.html")
+
+
+
+@app.route("/userlogin")
+def login():
+    return render_template("userlogin.html")
+
+
 
 #testing for database connection
  

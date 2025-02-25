@@ -1,0 +1,137 @@
+{% extends 'baselogin.html' %}  {#  Or 'base.html' or whatever the name of your main HTML file is #}
+
+{% block title %}
+User Signup
+{% endblock title %}
+
+
+
+{% block form %}
+<style>
+    /* Custom styles for Sign In form within carousel - ideally move to main.css later (same styles as before) */
+    .form-icon-input-group {
+        position: relative;
+    }
+
+    .form-icon-input-group i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+    }
+
+    .form-icon-input-group .form-control {
+        padding-left: 40px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        background-color: #f8f8f8;
+    }
+
+    .form-icon-input-group .form-control::placeholder {
+        color: #bbb;
+        font-style: italic;
+    }
+
+    .btn-login {
+        background-color: #6f42c1;
+        border-color: #6f42c1;
+        color: white;
+        border-radius: 5px;
+        padding: 12px 25px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-login:hover {
+        background-color: #5e35b1;
+        border-color: #5e35b1;
+    }
+
+    .social-login-separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #777;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .social-login-separator::before,
+    .social-login-separator::after {
+        content: '';
+        flex: 1;
+        padding: 0.5px;
+        background-color: #eee;
+    }
+
+    .social-login-separator::before {
+        margin-right: 15px;
+    }
+
+    .social-login-separator::after {
+        margin-left: 15px;
+    }
+
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        margin: 0 8px;
+        color: #555;
+        transition: border-color 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card" style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+                <div class="card-body" style="padding: 35px;">
+                    <h4 class="card-title text-center" style="color: #6f42c1; font-family: var(--heading-font); font-weight: 700; font-size: 1.8rem; margin-bottom: 25px;">Sign Up</h4>
+                    <form class="php-email-form">
+                        <div class="form-group form-icon-input-group">
+                            <i class="bi bi-person-fill"></i> <input type="text" name="srfID" class="form-control" id="srfID" placeholder="SRF ID" required>
+                        </div>
+                        <div class="form-group mt-3 form-icon-input-group">
+                            <i class="bi bi-envelope-fill"></i> <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group mt-3 form-icon-input-group">
+                            <i class="bi bi-calendar-event-fill"></i> <input type="date" name="dob" class="form-control" id="dob" placeholder="Date of Birth" required>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-login">LOGIN</button>
+                        </div>
+
+                        <div class="mt-3 text-center" style="font-size: 0.9rem;">
+                            <a href="userlogin" style="color: var(--accent-color);">Click here to Login</a>
+                        </div>
+
+                        <div class="social-login-separator mt-4">
+                            Or Sign in with social platform
+                        </div>
+
+                        <div class="social-icons text-center">
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                            <a href="#"><i class="bi bi-twitter"></i></a>
+                            <a href="#"><i class="bi bi-google"></i></a>
+                            <a href="#"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock form %}
